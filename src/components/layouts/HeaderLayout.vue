@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>&lt;Aierse /&gt;</h1>
+    <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
     <nav>
       <ul>
         <li><RouterLink to="/Vue">Vue</RouterLink></li>
@@ -16,6 +16,7 @@
   user-select: none;
   color: var(--main-color);
 }
+
 header {
   display: flex;
   padding: 2.4rem 40rem;
@@ -34,9 +35,14 @@ hr {
 
 li {
   display: inline-block;
+  text-align: center;
+}
+
+li > a {
+  display: inline-block;
   font-size: 2.4rem;
   font-weight: bold;
-  text-align: center;
+  width: 100%;
 
   min-width: 12rem;
   padding: 1.2rem;
