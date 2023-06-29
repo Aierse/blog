@@ -2,7 +2,7 @@ name: gh-pages
 
 on:
   push:
-    branches: [develope, blog]
+    branches: [develope]
   pull_request:
     branches: [main]
 
