@@ -3,8 +3,8 @@
     <h1>&lt;Aierse /&gt;</h1>
     <nav>
       <ul>
-        <li>Vue</li>
-        <li>React</li>
+        <li><RouterLink to="/Vue">Vue</RouterLink></li>
+        <li><RouterLink to="/React">React</RouterLink></li>
       </ul>
     </nav>
   </header>
