@@ -1,85 +1,82 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderLayout from './components/layouts/HeaderLayout.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <HeaderLayout />
+  <nav></nav>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped>
-header {
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+:root {
+  --main-color: #20c443;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
-  max-height: 100vh;
+  letter-spacing: 0.2rem;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+html {
+  font-size: 62.5%;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+ul,
+ol {
+  list-style: none;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+a {
+  color: sienna;
+  text-decoration: none;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
-nav a:first-of-type {
-  border: 0;
+h1 {
+  font-size: 3.2rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+h2 {
+  font-size: 2.4rem;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+h3 {
+  font-size: 1.9rem;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+h4 {
+  font-size: 1.6rem;
+}
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+h5 {
+  font-size: 1.3rem;
+}
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+h6 {
+  font-size: 1.1rem;
 }
 </style>
