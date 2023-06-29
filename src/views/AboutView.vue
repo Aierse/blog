@@ -1,7 +1,14 @@
 <script lang="ts">
 import IncreaseButton from '../components/IncreaseButton.vue'
 
+const value = 'hello'
+
 export default {
+  data() {
+    return {
+      value: value
+    }
+  },
   components: {
     IncreaseButton
   }
@@ -9,9 +16,9 @@ export default {
 </script>
 
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <IncreaseButton title="First" />
+  <div>
+    <h1>This is an Practice page</h1>
+    <IncreaseButton :title="value" />
     <IncreaseButton title="Second" />
     <IncreaseButton title="Third" />
     <IncreaseButton title="Fourth" />
