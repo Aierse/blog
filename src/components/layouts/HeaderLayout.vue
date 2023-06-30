@@ -65,12 +65,10 @@ hr {
   border-radius: 50%;
 }
 
-li {
-  display: inline-block;
-  text-align: center;
-}
-
 li img {
-  width: 4rem;
+  --square-size: 4rem;
+
+  width: var(--square-size);
+  height: var(--square-size);
 }
 </style>
