@@ -3,21 +3,27 @@
     <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
     <nav>
       <ul>
-        <li>
-          <a href="https://github.com/Aierse"
-            ><img src="../../assets/images/header/github.svg"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d">
-            <img src="../../assets/images/header/notion.svg" />
-          </a>
+        <li v-for="{ href, src } in logos">
+          <a :href="href"><img :src="src" /></a>
         </li>
       </ul>
     </nav>
   </header>
   <hr />
 </template>
+
+<script setup lang="ts">
+const logos = [
+  {
+    href: 'https://github.com/Aierse',
+    src: '../../src/assets/images/header/github.svg'
+  },
+  {
+    href: 'https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d',
+    src: '../../src/assets/images/header/notion.svg'
+  }
+]
+</script>
 
 <style scoped>
 * {
