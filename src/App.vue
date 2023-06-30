@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import HeaderLayout from './components/layouts/HeaderLayout.vue'
+import BodyLayout from './components/layouts/BodyLayout.vue'
 </script>
 
 <template>
   <HeaderLayout />
-  <nav></nav>
-  <main>
-    <RouterView />
-  </main>
+  <BodyLayout />
 </template>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
 :root {
-  --main-color: #20c443;
+  --main-color: rgb(20, 196, 35);
+  --serve-color: #444;
 }
 
 * {
