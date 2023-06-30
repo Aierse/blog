@@ -1,26 +1,31 @@
 <template>
   <header>
-    <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
-    <nav>
-      <ul>
-        <li v-for="{ href, src } in logos">
-          <a :href="href"><img :src="src" /></a>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
+      <nav>
+        <ul>
+          <li v-for="{ href, src } in logos">
+            <a :href="href"><img :src="src" /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <hr />
   </header>
-  <hr />
 </template>
 
 <script setup lang="ts">
+import githubLogo from '../../assets/images/header/github.svg'
+import notionLogo from '../../assets/images/header/notion.svg'
+
 const logos = [
   {
     href: 'https://github.com/Aierse',
-    src: '../../src/assets/images/header/github.svg'
+    src: githubLogo
   },
   {
     href: 'https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d',
-    src: '../../src/assets/images/header/notion.svg'
+    src: notionLogo
   }
 ]
 </script>
