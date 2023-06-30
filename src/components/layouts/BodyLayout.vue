@@ -5,8 +5,11 @@ import SideBar from '../SideBar.vue'
 
 <template>
   <main>
-    <RouterView />
-    <SideBar />
+    <span class="vertical"></span>
+    <article>
+      <RouterView />
+    </article>
+    <span class="vertical"></span>
   </main>
 </template>
 
@@ -14,7 +17,18 @@ import SideBar from '../SideBar.vue'
 main {
   display: flex;
   justify-content: center;
+  margin: 4rem 0;
+}
 
-  margin: 4rem 40rem;
+article {
+  width: 50%;
+  text-align: center;
+}
+
+.vertical {
+  display: inline-block;
+  width: 0.1rem;
+
+  background: linear-gradient(white, 8%, var(--main-color) 84%, white);
 }
 </style>
