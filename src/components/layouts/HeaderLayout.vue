@@ -3,8 +3,16 @@
     <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
     <nav>
       <ul>
-        <li><RouterLink to="/Vue">Vue</RouterLink></li>
-        <li><RouterLink to="/React">React</RouterLink></li>
+        <li>
+          <a href="https://github.com/Aierse"
+            ><img src="../../assets/images/header/github.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d">
+            <img src="../../assets/images/header/notion.svg" />
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -19,13 +27,19 @@
 
 header {
   display: flex;
-  padding: 2.4rem 40rem;
+  padding: 0.4rem 8rem;
   align-items: center;
   justify-content: space-between;
 }
 
 h1 {
   cursor: pointer;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 hr {
@@ -38,18 +52,7 @@ li {
   text-align: center;
 }
 
-li > a {
-  display: inline-block;
-  font-size: 2.4rem;
-  font-weight: bold;
-  width: 100%;
-
-  min-width: 12rem;
-  padding: 1.2rem;
-  border-left: 0.1rem solid var(--main-color);
-}
-
-li:last-child {
-  border-right: 0.1rem solid var(--main-color);
+li img {
+  width: 4rem;
 }
 </style>
