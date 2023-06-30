@@ -37,6 +37,13 @@ const logos = [
 }
 
 header {
+  position: sticky;
+  top: 0;
+
+  background: white;
+}
+
+div {
   display: flex;
   padding: 0.4rem 8rem;
   align-items: center;
