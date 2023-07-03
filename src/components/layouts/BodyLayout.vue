@@ -6,9 +6,9 @@ import SideBar from '../SideBar.vue'
 <template>
   <main>
     <span class="vertical"></span>
-    <article>
+    <section>
       <RouterView />
-    </article>
+    </section>
     <span class="vertical"></span>
   </main>
 </template>
@@ -20,7 +20,7 @@ main {
   margin: 4rem 0;
 }
 
-article {
+section {
   width: 50%;
   text-align: center;
 }
@@ -33,7 +33,7 @@ article {
 }
 
 @media (max-width: 82rem) {
-  article {
+  section {
     width: 100%;
     text-align: center;
   }
