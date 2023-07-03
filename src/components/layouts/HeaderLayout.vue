@@ -71,4 +71,23 @@ li img {
   width: var(--square-size);
   height: var(--square-size);
 }
+
+@media (max-width: 82rem) {
+  div {
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  li img {
+    --square-size: 2.4rem;
+
+    width: var(--square-size);
+    height: var(--square-size);
+  }
+}
 </style>

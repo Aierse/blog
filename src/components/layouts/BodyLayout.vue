@@ -20,18 +20,16 @@ main {
   margin: 4rem 0;
 }
 
-@media (min-width: 82rem) {
-  article {
-    width: 50%;
-    text-align: center;
-  }
+article {
+  width: 50%;
+  text-align: center;
+}
 
-  .vertical {
-    display: inline-block;
-    width: 0.1rem;
+.vertical {
+  display: inline-block;
+  width: 0.1rem;
 
-    background: linear-gradient(white, 8%, var(--main-color) 84%, white);
-  }
+  background: linear-gradient(white, 8%, var(--main-color) 84%, white);
 }
 
 @media (max-width: 82rem) {
