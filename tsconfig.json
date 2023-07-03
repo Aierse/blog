@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "typeRoots": ["./@types", "./node_modules/@types"],
-    "types": ["vuetify"]
+    "types": ["vuetify"],
+    "allowJs": true
   },
   "files": [],
   "references": [
