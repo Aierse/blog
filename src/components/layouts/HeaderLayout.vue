@@ -24,7 +24,7 @@ const logos = [
     src: githubLogo
   },
   {
-    href: 'https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d',
+    href: 'https://accessible-supernova-c7a.notion.site/7146b8d22aee45488825a58f3e2dbe6d',
     src: notionLogo
   }
 ]
