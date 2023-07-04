@@ -1,8 +1,8 @@
-클릭시 count가 상승하는 버튼에 title을 전달하는 예제를 만들어보자
+> 클릭시 count가 상승하는 버튼에 title을 전달하는 예제를 만들어보자
 
 #### 자식 컴포넌트
 
-```vue
+```
 <template>
   <button @click="increment">{{ title }}: {{ count }}</button>
 </template>
@@ -27,17 +27,7 @@ title을 명시해야만 templete에서 해당 props를 사용할 수 있다.
 
 #### 부모 컴포넌트
 
-```vue
-<script lang="ts">
-import IncreaseButton from '../components/IncreaseButton.vue'
-
-export default {
-  components: {
-    IncreaseButton
-  }
-}
-</script>
-
+```
 <template>
   <div class="about">
     <h1>This is an about page</h1>
@@ -48,6 +38,17 @@ export default {
     <IncreaseButton title="Fifth" />
   </div>
 </template>
+
+<script lang="ts">
+import IncreaseButton from '../components/IncreaseButton.vue'
+
+export default {
+  components: {
+    IncreaseButton
+  }
+}
+</script>
+
 ```
 
 부모 컴포넌트에서는 먼저 IncreaseButton을 import 한다.

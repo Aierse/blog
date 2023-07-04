@@ -1,9 +1,10 @@
 <script>
 import { useRoute } from 'vue-router'
-import VueMarkdownIt from 'vue3-markdown-it'
+import MarkdownIt from 'markdown-it'
+import Highlight from 'markdown-it-highlightjs'
+import hljs from 'highlight.js'
 
 export default {
-  components: { VueMarkdownIt },
   data() {
     return {
       md: ''
@@ -17,50 +18,55 @@ export default {
       fileName: fileName
     }
   },
-
   async created() {
     const { default: url } = await import(`../assets/posts/${this.fileName}.md`)
     const res = await fetch(url)
 
     const md = await res.text()
     this.md = md
+  },
+  computed: {
+    renderedContent() {
+      const md = new MarkdownIt()
+      md.use(Highlight, { hljs })
+
+      return md.render(this.md)
+    }
   }
 }
 </script>
 
 <template>
-  <article>
-    <h1>{{ fileName }}</h1>
-    <hr />
-    <VueMarkdownIt class="md-body" :source="md" />
-  </article>
+  <h1>{{ fileName }}</h1>
+  <hr />
+  <article v-html="renderedContent"></article>
 </template>
 
-<style>
-article > h1 {
-  margin-bottom: 0.8rem;
-}
-article > hr {
+<style scoped>
+hr {
   border-top: 0.1rem solid var(--main-color);
   border-radius: 50%;
+
+  margin: 0.8rem 0;
 }
 
-.md-body {
+article {
   font-size: 1.6rem;
   text-align: left;
   padding: 0 1.6rem;
 }
 
-.md-body :not(:last-child) {
+article :not(:last-child) {
   margin-bottom: 0.8rem;
 }
 
-.md-body :where(h1, h2, h3, h4, h5, h6) {
-  border-top: 1px solid var(--main-color);
+article :where(h1, h2, h3, h4, h5, h6) {
+  padding: 0.8rem 0;
   border-bottom: 1px solid var(--main-color);
 }
 
-.md-body > pre {
-  background: #f7f7f7;
+article > blockquote {
+  background: #f6f8fa;
+  padding: 0.8rem;
 }
 </style>
