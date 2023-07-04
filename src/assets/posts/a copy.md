@@ -2,7 +2,7 @@
 
 #### 자식 컴포넌트
 
-```vue
+```
 <template>
   <button @click="increment">{{ title }}: {{ count }}</button>
 </template>
@@ -27,7 +27,7 @@ title을 명시해야만 templete에서 해당 props를 사용할 수 있다.
 
 #### 부모 컴포넌트
 
-```vue
+```
 <script lang="ts">
 import IncreaseButton from '../components/IncreaseButton.vue'
 
