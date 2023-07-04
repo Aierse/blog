@@ -74,10 +74,19 @@ article > hr {
   margin: 1.6rem 0;
 }
 
+article > ul {
+  list-style: disc;
+  padding-left: 2.4rem;
+}
+
 article > blockquote {
   border-left: 0.4rem solid var(--main-color);
   background: #f6f8fa;
   padding: 0.8rem;
+}
+
+article > p > img {
+  width: 100%;
 }
 
 article > p > code {
