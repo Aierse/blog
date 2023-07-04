@@ -28,6 +28,7 @@ section {
 .vertical {
   display: inline-block;
   width: 0.1rem;
+  margin: 0 1.6rem;
 
   background: linear-gradient(white, 8%, var(--main-color) 84%, white);
 }

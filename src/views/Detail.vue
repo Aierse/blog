@@ -61,12 +61,28 @@ article :not(:last-child) {
 }
 
 article :where(h1, h2, h3, h4, h5, h6) {
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--main-color);
+  padding: 2.4rem 0;
+  text-align: center;
+}
+</style>
+
+<style>
+article > hr {
+  border-top: 0.1rem solid var(--main-color);
+  border-radius: 50%;
+
+  margin: 1.6rem 0;
 }
 
 article > blockquote {
+  border-left: 0.4rem solid var(--main-color);
   background: #f6f8fa;
   padding: 0.8rem;
+}
+
+article > p > code {
+  background: #e5e5e5;
+  border-radius: 0.4rem;
+  padding: 0 0.4rem;
 }
 </style>
