@@ -16,7 +16,7 @@ for (const t in posts) {
   </section>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 section:not(:last-child) {
   margin-bottom: 0.8rem;
 }

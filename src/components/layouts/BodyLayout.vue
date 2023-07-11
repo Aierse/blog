@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import SideBar from '../SideBar.vue'
 </script>
 
 <template>
@@ -13,24 +12,24 @@ import SideBar from '../SideBar.vue'
   </main>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 main {
   display: flex;
   justify-content: center;
   margin: 4rem 0;
-}
 
-section {
-  width: 50%;
-  text-align: center;
-}
+  > section {
+    width: 50%;
+    text-align: center;
+  }
 
-.vertical {
-  display: inline-block;
-  width: 0.1rem;
-  margin: 0 1.6rem;
+  .vertical {
+    display: inline-block;
+    width: 0.1rem;
+    margin: 0 1.6rem;
 
-  background: linear-gradient(white, 8%, var(--main-color) 84%, white);
+    background: linear-gradient(white, 8%, var(--main-color) 84%, white);
+  }
 }
 
 @media (max-width: 82rem) {

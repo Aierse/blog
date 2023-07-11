@@ -30,7 +30,7 @@ const logos = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 * {
   user-select: none;
   color: var(--main-color);

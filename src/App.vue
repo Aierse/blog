@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import HeaderLayout from './components/layouts/HeaderLayout.vue'
 import BodyLayout from './components/layouts/BodyLayout.vue'
 </script>
@@ -9,7 +8,7 @@ import BodyLayout from './components/layouts/BodyLayout.vue'
   <BodyLayout />
 </template>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
 :root {
@@ -23,12 +22,12 @@ import BodyLayout from './components/layouts/BodyLayout.vue'
   line-height: 1.5;
   letter-spacing: 0.2rem;
   font-family: 'Nanum Gothic', sans-serif;
-}
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
 
 html {

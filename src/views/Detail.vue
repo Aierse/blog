@@ -42,7 +42,7 @@ export default {
   <article v-html="renderedContent"></article>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 hr {
   border-top: 0.1rem solid var(--main-color);
   border-radius: 50%;
@@ -54,44 +54,48 @@ article {
   font-size: 1.6rem;
   text-align: left;
   padding: 0 1.6rem;
-}
 
-article :not(:last-child) {
-  margin-bottom: 0.8rem;
-}
+  :not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
 
-article :where(h1, h2, h3, h4, h5, h6) {
-  padding: 2.4rem 0;
-  text-align: center;
+  :where(h1, h2, h3, h4, h5, h6) {
+    padding: 2.4rem 0;
+    text-align: center;
+  }
 }
 </style>
 
-<style>
-article > hr {
-  border-top: 0.1rem solid var(--main-color);
-  border-radius: 50%;
+<style lang="scss">
+article {
+  > hr {
+    border-top: 0.1rem solid var(--main-color);
+    border-radius: 50%;
 
-  margin: 1.6rem 0;
-}
+    margin: 1.6rem 0;
+  }
 
-article > ul {
-  list-style: disc;
-  padding-left: 2.4rem;
-}
+  > ul {
+    list-style: disc;
+    padding-left: 2.4rem;
+  }
 
-article > blockquote {
-  border-left: 0.4rem solid var(--main-color);
-  background: #f6f8fa;
-  padding: 0.8rem;
-}
+  > blockquote {
+    border-left: 0.4rem solid var(--main-color);
+    background: #f6f8fa;
+    padding: 0.8rem;
+  }
 
-article > p > img {
-  width: 100%;
-}
+  > p {
+    > img {
+      width: 100%;
+    }
 
-article > p > code {
-  background: #e5e5e5;
-  border-radius: 0.4rem;
-  padding: 0 0.4rem;
+    > code {
+      background: #e5e5e5;
+      border-radius: 0.4rem;
+      padding: 0 0.4rem;
+    }
+  }
 }
 </style>
