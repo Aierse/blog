@@ -72,7 +72,7 @@ article {
     border-top: 0.1rem solid var(--main-color);
     border-radius: 50%;
 
-    margin: 1.6rem 0;
+    margin: 0.8rem 0;
   }
 
   > ul {
