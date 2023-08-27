@@ -13,5 +13,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  assetsInclude: ['**/*.md']
+  assetsInclude: ['**/*.md'],
+  base: 'https://Aierse.github.io/blog/'
 })
