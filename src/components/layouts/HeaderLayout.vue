@@ -1,7 +1,7 @@
 <template>
   <header>
     <div>
-      <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
+      <h1><RouterLink to="/blog">&lt;Aierse /&gt;</RouterLink></h1>
       <nav>
         <ul>
           <li v-for="{ href, src } in logos">
