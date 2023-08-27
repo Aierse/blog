@@ -14,5 +14,5 @@ export default defineConfig({
     }
   },
   assetsInclude: ['**/*.md'],
-  base: 'https://Aierse.github.io/blog/'
+  base: `/blog`
 })
