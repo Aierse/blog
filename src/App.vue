@@ -5,7 +5,9 @@ import BodyLayout from './components/layouts/BodyLayout.vue'
 
 <template>
   <HeaderLayout />
-  <BodyLayout />
+  <Suspense>
+    <BodyLayout />
+  </Suspense>
 </template>
 
 <style lang="scss">

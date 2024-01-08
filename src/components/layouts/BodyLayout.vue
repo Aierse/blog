@@ -4,11 +4,9 @@ import { RouterView } from 'vue-router'
 
 <template>
   <main>
-    <span class="vertical"></span>
     <section>
       <RouterView />
     </section>
-    <span class="vertical"></span>
   </main>
 </template>
 
@@ -18,28 +16,18 @@ main {
   justify-content: center;
   margin: 4rem 0;
 
-  > section {
-    width: 50%;
-    text-align: center;
+  @media (max-width: 1023px) {
+    > section {
+      width: 90%;
+      text-align: center;
+    }
   }
 
-  .vertical {
-    display: inline-block;
-    width: 0.1rem;
-    margin: 0 1.6rem;
-
-    background: linear-gradient(white, 8%, var(--main-color) 84%, white);
-  }
-}
-
-@media (max-width: 82rem) {
-  section {
-    width: 100%;
-    text-align: center;
-  }
-
-  .vertical {
-    display: none;
+  @media (min-width: 1024px) {
+    > section {
+      width: 50%;
+      text-align: center;
+    }
   }
 }
 </style>

@@ -1,45 +1,35 @@
-<script>
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import Highlight from 'markdown-it-highlightjs'
 import hljs from 'highlight.js'
 
-export default {
-  data() {
-    return {
-      md: ''
-    }
-  },
-  setup() {
-    const route = useRoute()
-    const fileName = route.params.fileName
+const route = useRoute()
+const fileName = route.params.fileName
 
-    return {
-      fileName: fileName
-    }
-  },
-  async created() {
-    const { default: url } = await import(`../assets/posts/${this.fileName}.md`)
-    const res = await fetch(url)
+const renderedContent = computed(() => {
+  return
+})
 
-    const md = await res.text()
-    this.md = md
-  },
-  computed: {
-    renderedContent() {
-      const md = new MarkdownIt()
-      md.use(Highlight, { hljs })
+onMounted(async () => {
+  const { default: url } = await import(`../assets/posts/${fileName}.md`)
+  const res = await fetch(url)
+  const text = ref(await res.text())
 
-      return md.render(this.md)
-    }
-  }
-}
+  const markdown = new MarkdownIt()
+  markdown.use(Highlight, { hljs })
+
+  text.value = markdown.render(text.value)
+
+  document.querySelector('article')!.innerHTML = text.value
+})
 </script>
 
 <template>
   <h1>{{ fileName }}</h1>
   <hr />
-  <article v-html="renderedContent"></article>
+  <article></article>
 </template>
 
 <style scoped lang="scss">
