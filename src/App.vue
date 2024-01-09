@@ -11,7 +11,7 @@ import BodyLayout from './components/layouts/BodyLayout.vue'
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 :root {
   --main-color: rgb(20, 196, 35);
@@ -23,7 +23,7 @@ import BodyLayout from './components/layouts/BodyLayout.vue'
   padding: 0;
   line-height: 1.5;
   letter-spacing: 0.2rem;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 
   &,
   &::after,
