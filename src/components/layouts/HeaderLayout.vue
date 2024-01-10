@@ -1,7 +1,7 @@
 <template>
   <header>
     <div>
-      <h1><RouterLink to="/">&lt;Aierse /&gt;</RouterLink></h1>
+      <h1><RouterLink to="/blog">&lt;Aierse /&gt;</RouterLink></h1>
       <nav>
         <ul>
           <li v-for="{ href, src } in logos">
@@ -24,13 +24,13 @@ const logos = [
     src: githubLogo
   },
   {
-    href: 'https://www.notion.so/7146b8d22aee45488825a58f3e2dbe6d',
+    href: 'https://accessible-supernova-c7a.notion.site/7146b8d22aee45488825a58f3e2dbe6d',
     src: notionLogo
   }
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 * {
   user-select: none;
   color: var(--main-color);
