@@ -259,11 +259,7 @@ npx serverless plugin install -n serverless-dynamodb
 
 `AWS CLI`를 설치합니다.
 
-[최신 버전의 AWS CLI 설치 또는 업데이트 - AWS Command Line Interface
-
-이전 버전에서 업데이트하는 경우 unzip 명령을 실행하면 기존 파일을 덮어쓸지 묻는 메시지가 표시됩니다. 스크립트 자동화와 같은 경우에 이러한 프롬프트를 건너뛰려면 unzip에 대한 -u 업데이
-
-docs.aws.amazon.com](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html)
+[다운로드 경로](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html)
 
 설치를 완료했다면 `cmd`에서 `aws configure` 명령어로 액세스 키를 할당합니다.
 
@@ -349,10 +345,6 @@ AWS CLI로 할당된 리전을 제대로 불러오지 못하는 경우가 간혹
 
 칼럼이 id 하나뿐인 Test 테이블 생성
 
-[GitHub - Aierse/NestJS-Lambda-DynamoDB
-
-Contribute to Aierse/NestJS-Lambda-DynamoDB development by creating an account on GitHub.
-
-github.com](https://github.com/Aierse/NestJS-Lambda-DynamoDB)
+[소스코드](https://github.com/Aierse/NestJS-Lambda-DynamoDB)
 
 `/src/app.*` 파일들과 `/src/entity` 만 확인하시면 됩니다.
