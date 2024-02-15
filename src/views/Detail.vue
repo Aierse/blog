@@ -7,7 +7,7 @@ import hljs from 'highlight.js'
 
 const route = useRoute()
 const fileName = route.params.fileName
-const text = ref('<h2>데이터를 불러올 수 없습니다.</h2>')
+const text = ref('')
 
 onMounted(async () => {
   const { default: url } = await import(`../assets/posts/${fileName}.md`)
